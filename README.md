@@ -99,12 +99,12 @@ export AWS_ACCESS_KEY_ID=""
 export AWS_SECRET_ACCESS_KEY=""
 
 ```
-# run
+## run
 ```diff 
 terraform init
 terraform apply
 ```
-# connect
+## connect
 ```diff 
 
 aws eks --region us-east-1  update-kubeconfig --name MyCluster
