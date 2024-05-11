@@ -24,22 +24,22 @@ provider "aws" {
 locals {
   # Define the network variables
   network = {
-    vpc_name            = "${var.cluster_name}-vpc" # Define the VPC name
-    region              = "us-east-1"               # Define the AWS region
-    public_subnet_count = 2                         # Define the number of public subnets
+    vpc_name             = "${var.cluster_name}-vpc" # Define the VPC name
+    region               = "us-east-1"               # Define the AWS region
+    public_subnet_count  = 2                         # Define the number of public subnets
     private_subnet_count = 2                        # Define the number of private subnets
-    vpc_cidr_block      = "10.0.0.0/16"             # Define the CIDR block for the VPC
+    vpc_cidr_block       = "10.0.0.0/16"             # Define the CIDR block for the VPC
   }
 }
 
 # Create the network module
 module "network" {
-  source              = "./modules/network"  # Define the source of the module
-  vpc_name            = local.network.vpc_name
-  region              = local.network.region
-  public_subnet_count = local.network.public_subnet_count
+  source               = "./modules/network"  # Define the source of the module
+  vpc_name             = local.network.vpc_name
+  region               = local.network.region
+  public_subnet_count  = local.network.public_subnet_count
   private_subnet_count = local.network.private_subnet_count
-  vpc_cidr_block      = local.network.vpc_cidr_block
+  vpc_cidr_block       = local.network.vpc_cidr_block
 }
 
 # Create the IAM roles module
