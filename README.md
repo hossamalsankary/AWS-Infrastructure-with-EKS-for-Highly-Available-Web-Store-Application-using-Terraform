@@ -2,7 +2,8 @@
 
 This repository contains the configuration for a Kubernetes cluster hosted on AWS.
 
-![screenshot](./Diagram.svg)
+
+<img src="./Diagram.svg" alt="Diagram" style="width:100%;"/>
 
 
 ## Prerequisites
